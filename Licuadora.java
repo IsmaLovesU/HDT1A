@@ -8,13 +8,13 @@
 public class Licuadora implements Interfaz 
 {
     private boolean encendido;
-    private boolean llenado;
+    private boolean lleno;
     private int velocidad;
 
     public Licuadora() 
     {
         this.encendido = false;
-        this.llenado = false;
+        this.lleno = false;
         this.velocidad = 0;
     }
 
@@ -35,9 +35,9 @@ public class Licuadora implements Interfaz
     @Override
     public void llenar() 
     {
-        if (llenado) 
+        if (lleno) 
         {
-            llenado = true;
+            lleno = true;
             System.out.println("Licuadora llena.");
         } 
         else 
@@ -55,7 +55,7 @@ public class Licuadora implements Interfaz
             return;
         }
 
-        if (llenado) 
+        if (lleno) 
         {
             System.out.println("No se puede aumentar la velocidad. La licuadora está vacía.");
             return;
@@ -75,16 +75,16 @@ public class Licuadora implements Interfaz
     @Override
     public boolean consultarLlenado() 
     {
-        System.out.println(llenado ? "La licuadora está llena." : "La licuadora está vacía.");
-        return llenado;
+        System.out.println(lleno ? "La licuadora está llena." : "La licuadora está vacía.");
+        return lleno;
     }
 
     @Override
     public void vaciar() 
     {
-        if (llenado) 
+        if (lleno) 
         {
-            llenado = false;
+            lleno = false;
             System.out.println("Licuadora vaciada.");
         } 
         else 
@@ -103,14 +103,14 @@ public class Licuadora implements Interfaz
         this.encendido = encendido;
     }
 
-    public boolean getLlenado() 
+    public boolean getlleno() 
     {
-        return llenado;
+        return lleno;
     }
 
-    public void setLlenado(boolean llenado) 
+    public void setlleno(boolean lleno) 
     {
-        this.llenado = llenado;
+        this.lleno = lleno;
     }
 
     public int getVelocidad() 
