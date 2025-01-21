@@ -1,33 +1,35 @@
 /**
  * Universidad del Valle de Guatemala
- * Autor: Marcelo Detlefsen - 24554
- * Fecha: 20/01/2025
- * Descripción: Clase que implementa la interfaz Interfaz y define métodos para manejar una licuadora.
+ * Algoritmos y Estructuras de datos
+ * Ing. Douglas Barrios
+ * Colaboradores: 
+ * Marcelo Detlefsen - 24554
+ * Andrés Ismalej - 24005
+ * Harry Mendez - 
+ * Fecha: 23/01/2025
+ * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
+ * llenar, controlar velocidad y consultar el estado del llenado.
  */
 
-public class Licuadora implements Interfaz 
-{
+public class Licuadora implements Interfaz {
     private boolean encendido;
     private boolean llenado;
     private int velocidad;
 
-    public Licuadora() 
-    {
+    public Licuadora() {
+
         this.encendido = false;
         this.llenado = false;
         this.velocidad = 0;
     }
 
     @Override
-    public void encender() 
-    {
-        if (encendido) 
-        {
+    public void encender() {
+        if (encendido == false) {
             encendido = true;
             System.out.println("Licuadora encendida.");
-        } 
-        else 
-        {
+
+        } else {
             System.out.println("La licuadora ya está encendida.");
         }
     }
@@ -35,13 +37,11 @@ public class Licuadora implements Interfaz
     @Override
     public void llenar() 
     {
-        if (llenado) 
-        {
+        if (llenado == false) {
             llenado = true;
             System.out.println("Licuadora llena.");
-        } 
-        else 
-        {
+
+        } else {
             System.out.println("La licuadora ya está llena.");
         }
     }

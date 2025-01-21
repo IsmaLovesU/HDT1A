@@ -1,7 +1,12 @@
 /**
  * Universidad del Valle de Guatemala
- * Autor: Marcelo Detlefsen - 24554
- * Fecha: 18/01/2025
+ * Algoritmos y Estructuras de datos
+ * Ing. Douglas Barrios
+ * Colaboradores: 
+ * Marcelo Detlefsen - 24554
+ * Andrés Ismalej - 24005
+ * Harry Mendez - 
+ * Fecha: 23/01/2025
  * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
  * llenar, controlar velocidad y consultar el estado del llenado.
  */
