@@ -1,11 +1,17 @@
-public class Licuadora implements Interfaz
+/**
+ * Universidad del Valle de Guatemala
+ * Autor: Marcelo Detlefsen - 24554
+ * Fecha: 20/01/2025
+ * Descripción: Clase que implementa la interfaz Interfaz y define métodos para manejar una licuadora.
+ */
+
+public class Licuadora implements Interfaz 
 {
     private boolean encendido;
     private boolean llenado;
     private int velocidad;
-    private static final int MAX_VELOCIDAD = 10;
 
-    public Licuadora()
+    public Licuadora() 
     {
         this.encendido = false;
         this.llenado = false;
@@ -13,9 +19,9 @@ public class Licuadora implements Interfaz
     }
 
     @Override
-    public void encender()
+    public void encender() 
     {
-        if (!encendido) 
+        if (encendido) 
         {
             encendido = true;
             System.out.println("Licuadora encendida.");
@@ -27,9 +33,9 @@ public class Licuadora implements Interfaz
     }
 
     @Override
-    public void llenar()
+    public void llenar() 
     {
-        if (!llenado) 
+        if (llenado) 
         {
             llenado = true;
             System.out.println("Licuadora llena.");
@@ -41,47 +47,40 @@ public class Licuadora implements Interfaz
     }
 
     @Override
-    public void aumentarVelocidad()
+    public void aumentarVelocidad() 
     {
-        if (!encendido) 
+        if (encendido) 
         {
             System.out.println("No se puede aumentar la velocidad. La licuadora está apagada.");
             return;
         }
 
-        if (!llenado) 
+        if (llenado) 
         {
             System.out.println("No se puede aumentar la velocidad. La licuadora está vacía.");
             return;
         }
 
-        if (velocidad < MAX_VELOCIDAD) 
-        {
-            velocidad++;
-            System.out.println("Velocidad aumentada a: " + velocidad);
-        } 
-        else 
-        {
-            System.out.println("La licuadora ya está en la velocidad máxima.");
-        }
+        velocidad = (velocidad % 10) + 1;
+        System.out.println("Velocidad aumentada a: " + velocidad);
     }
 
     @Override
-    public int consultarVelocidad()
+    public int consultarVelocidad() 
     {
         System.out.println("La velocidad actual es: " + velocidad);
         return velocidad;
     }
 
     @Override
-    public boolean consultarLlenado()
+    public boolean consultarLlenado() 
     {
         System.out.println(llenado ? "La licuadora está llena." : "La licuadora está vacía.");
         return llenado;
     }
 
     @Override
-    public void vaciar()
+    public void vaciar() 
     {
         if (llenado) 
         {
@@ -93,22 +92,29 @@ public class Licuadora implements Interfaz
             System.out.println("La licuadora ya está vacía.");
         }
     }
-    
-    
-    public void apagar() 
-    {
-        if (encendido) 
-        {
-            encendido = false;
-            velocidad = 0; // Reiniciar velocidad al apagar
-            System.out.println("Licuadora apagada.");
-        } else {
-            System.out.println("La licuadora ya está apagada.");
-        }
-    }
 
-    public boolean isEncendido() 
+    public boolean getEncendido() 
     {
         return encendido;
+    }
+
+    public void setEncendido(boolean encendido) 
+    {
+        this.encendido = encendido;
+    }
+
+    public boolean getLlenado() 
+    {
+        return llenado;
+    }
+
+    public void setLlenado(boolean llenado) 
+    {
+        this.llenado = llenado;
+    }
+
+    public int getVelocidad() 
+    {
+        return velocidad;
     }
 }
