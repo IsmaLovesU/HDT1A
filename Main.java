@@ -67,27 +67,4 @@ public class Main {
         System.out.print("Por favor, seleccione alguna opción de las anteriores: ");
     }
 
-    public static void EncenderLicuadora() {
-
-    }
-
-    public static void LlenarLicuadora() {
-
-    }   
-
-    public static void AumentarVelocidad() {
-
-    }   
-
-    public static void ConsultarVelocidad() {
-
-    }   
-
-    public static void ConsultarLlenado() {
-
-    }   
-
-    public static void VaciarLicuadora() {
-
-    }   
 }
