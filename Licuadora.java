@@ -137,7 +137,7 @@ public class Licuadora implements Interfaz {
      *
      * @return true si la licuadora está llena, false si está vacía.
      */
-    public boolean getlleno() {
+    public boolean getLleno() {
         return lleno;
     }
 
@@ -146,7 +146,7 @@ public class Licuadora implements Interfaz {
      *
      * @param lleno true para indicar que la licuadora está llena, false si está vacía.
      */
-    public void setlleno(boolean lleno) {
+    public void setLleno(boolean lleno) {
         this.lleno = lleno;
     }
 
@@ -157,5 +157,14 @@ public class Licuadora implements Interfaz {
      */
     public int getVelocidad() {
         return velocidad;
+    }
+
+    /**
+     * Establece la velocidad a la que se utiliza la licuadora
+     *
+     * @param velocidad 1-10 son velocidades de la licuadora, 0 es apagado.
+     */
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
 }
