@@ -5,7 +5,7 @@
  * Colaboradores: 
  * Marcelo Detlefsen - 24554
  * Andrés Ismalej - 24005
- * Harry Mendez - 
+ * Harry Mendez - 24089
  * Fecha: 23/01/2025
  * Descripción: Clase licuadora que implementa interfaz, 
  * con funcionalidades básicas de una licuadora.

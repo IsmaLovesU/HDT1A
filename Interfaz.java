@@ -5,7 +5,7 @@
  * Colaboradores: 
  * Marcelo Detlefsen - 24554
  * Andrés Ismalej - 24005
- * Harry Mendez - 
+ * Harry Mendez - 24089
  * Fecha: 23/01/2025
  * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
  * llenar, controlar velocidad y consultar el estado del llenado.

@@ -5,7 +5,7 @@
  * Colaboradores: 
  * Marcelo Detlefsen - 24554
  * Andrés Ismalej - 24005
- * Harry Mendez - 
+ * Harry Mendez - 24089
  * Fecha: 23/01/2025
  * Descripción: Main para mostrar al usuario las opciones de la licuadora segun funcionalidades heredadas de interfaz.
  */
@@ -18,10 +18,10 @@ public class Main {
         Licuadora licuadora = new Licuadora();
         int opcion;
         do {
-            mostrarMenu();
+            mostrarMenu(); //Muestra el menu de opciones al ususario.
             opcion = scanner.nextInt();
             scanner.nextLine();
-
+            //Switch-case para el manejo de las opciones del menu.
             switch (opcion) {
                 case 1:
                     licuadora.encender();
@@ -48,10 +48,12 @@ public class Main {
                     System.out.println("\nPor favor, seleccione una opción válida.");
                     break;
             }
-        } while (opcion != 7);
+        } while (opcion != 7); //Bucle while que repite el menu hasta que el usuario elija la opcion de salir. 
         scanner.close();
     }
-
+    /**
+     * Metodo que muestra las opciones del menu al usuario.
+     */
     public static void mostrarMenu() {
         System.out.println();
         System.out.println("------Licuadora Ninja X3000------");
