@@ -7,8 +7,7 @@
  * Andrés Ismalej - 24005
  * Harry Mendez - 
  * Fecha: 23/01/2025
- * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
- * llenar, controlar velocidad y consultar el estado del llenado.
+ * Descripción: Main para mostrar al usuario las opciones de la licuadora segun funcionalidades heredadas de interfaz.
  */
 
 import java.util.Scanner;
