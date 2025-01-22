@@ -10,17 +10,32 @@
  * Descripción: Main para mostrar al usuario las opciones de la licuadora segun funcionalidades heredadas de interfaz.
  */
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         Licuadora licuadora = new Licuadora();
-        int opcion;
+        int opcion = 0;
+
         do {
-            mostrarMenu(); //Muestra el menu de opciones al ususario.
-            opcion = scanner.nextInt();
-            scanner.nextLine();
+            /*
+             * Programacion defensiva para el input en el menu de opciones.
+             */
+            boolean validar = false;
+            while (!validar) {
+                mostrarMenu(); //Muestra el menu de opciones al ususario.
+                try {
+                    opcion = scanner.nextInt();
+                    scanner.nextLine();
+                    validar = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("\nEntrada invalida. Por favor, ingrese un numero valido.");
+                    scanner.nextLine();
+                }
+            }
+
             //Switch-case para el manejo de las opciones del menu.
             switch (opcion) {
                 case 1:
