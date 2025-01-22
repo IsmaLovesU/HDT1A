@@ -27,10 +27,10 @@ public class Licuadora implements Interfaz {
     public void encender() {
         if (encendido == false) {
             encendido = true;
-            System.out.println("Licuadora encendida.");
+            System.out.println("\nLicuadora encendida.");
 
         } else {
-            System.out.println("La licuadora ya está encendida.");
+            System.out.println("\nLa licuadora ya está encendida.");
         }
     }
 
@@ -38,84 +38,68 @@ public class Licuadora implements Interfaz {
     public void llenar() {
         if (lleno == false) {
             lleno = true;
-        } if (lleno) {
-            lleno = true;
-            System.out.println("Licuadora llena.");
+            System.out.println("\nLicuadora llena.");
 
         } else {
-            System.out.println("La licuadora ya está llena.");
+            System.out.println("\nLa licuadora ya está llena.");
         }
     }
 
     @Override
-    public void aumentarVelocidad() 
-    {
-        if (encendido) 
-        {
-            System.out.println("No se puede aumentar la velocidad. La licuadora está apagada.");
+    public void aumentarVelocidad() {
+        if (encendido == false) {
+            System.out.println("\nNo se puede aumentar la velocidad. La licuadora está apagada.");
             return;
         }
 
-        if (lleno) 
-        {
-            System.out.println("No se puede aumentar la velocidad. La licuadora está vacía.");
+        if (lleno == false) {
+            System.out.println("\nNo se puede aumentar la velocidad. La licuadora está vacía.");
             return;
         }
 
         velocidad = (velocidad % 10) + 1;
-        System.out.println("Velocidad aumentada a: " + velocidad);
+        System.out.println("\nVelocidad aumentada a: " + velocidad);
     }
 
     @Override
-    public int consultarVelocidad() 
-    {
-        System.out.println("La velocidad actual es: " + velocidad);
+    public int consultarVelocidad() {
+        System.out.println("\nLa velocidad actual es: " + velocidad);
         return velocidad;
     }
 
     @Override
-    public boolean consultarLlenado() 
-    {
-        System.out.println(lleno ? "La licuadora está llena." : "La licuadora está vacía.");
+    public boolean consultarLlenado() {
+        System.out.println(lleno ? "\nLa licuadora está llena." : "\nLa licuadora está vacía.");
         return lleno;
     }
 
     @Override
-    public void vaciar() 
-    {
-        if (lleno) 
-        {
+    public void vaciar() {
+        if (lleno) {
             lleno = false;
-            System.out.println("Licuadora vaciada.");
-        } 
-        else 
-        {
-            System.out.println("La licuadora ya está vacía.");
+            System.out.println("\nLicuadora vaciada.");
+        } else {
+            System.out.println("\nLa licuadora ya está vacía.");
         }
     }
 
-    public boolean getEncendido() 
-    {
+    public boolean getEncendido() {
         return encendido;
     }
 
-    public void setEncendido(boolean encendido) 
-    {
+    public void setEncendido(boolean encendido) {
         this.encendido = encendido;
     }
 
-    public boolean getlleno() 
-    {
+    public boolean getlleno() {
         return lleno;
     }
 
-    public void setlleno(boolean lleno) 
-    {
+    public void setlleno(boolean lleno) {
         this.lleno = lleno;
     }
 
-    public int getVelocidad() 
-    {
+    public int getVelocidad() {
         return velocidad;
     }
 }

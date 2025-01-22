@@ -12,10 +12,9 @@
  */
 
 import java.util.Scanner;
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         Licuadora licuadora = new Licuadora();
         int opcion;
@@ -24,8 +23,7 @@ public class Main
             opcion = scanner.nextInt();
             scanner.nextLine();
 
-            switch (opcion)
-            {
+            switch (opcion) {
                 case 1:
                     licuadora.encender();
                     break;
@@ -45,17 +43,18 @@ public class Main
                     licuadora.vaciar();
                     break;
                 case 7:
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("\nGracias por usar la Ninja X3000");
                     break;
                 default:
-                    System.out.println("Por favor, seleccione una opción válida.");
+                    System.out.println("\nPor favor, seleccione una opción válida.");
                     break;
             }
         } while (opcion != 7);
+        scanner.close();
     }
 
-    public static void mostrarMenu()
-    {
+    public static void mostrarMenu() {
+        System.out.println();
         System.out.println("------Licuadora Ninja X3000------");
         System.out.println("1. Encender la licuadora");
         System.out.println("2. Llenar la licuadora con lo que se desea licuar");
@@ -67,33 +66,27 @@ public class Main
         System.out.print("Por favor, seleccione alguna opción de las anteriores: ");
     }
 
-    public static void EncenderLicuadora()
-    {
+    public static void EncenderLicuadora() {
 
     }
 
-    public static void LlenarLicuadora()
-    {
+    public static void LlenarLicuadora() {
 
     }   
 
-    public static void AumentarVelocidad()
-    {
+    public static void AumentarVelocidad() {
 
     }   
 
-    public static void ConsultarVelocidad()
-    {
+    public static void ConsultarVelocidad() {
 
     }   
 
-    public static void ConsultarLlenado()
-    {
+    public static void ConsultarLlenado() {
 
     }   
 
-    public static void VaciarLicuadora()
-    {
+    public static void VaciarLicuadora() {
 
     }   
 }
