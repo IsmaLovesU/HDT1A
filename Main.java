@@ -2,12 +2,11 @@
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de datos
  * Ing. Douglas Barrios
- * Colaboradores: 
- * Marcelo Detlefsen - 24554
- * Andrés Ismalej - 24005
- * Harry Mendez - 24089
- * Fecha: 23/01/2025
- * Descripción: Main para mostrar al usuario las opciones de la licuadora segun funcionalidades heredadas de interfaz.
+ * @author: Marcelo Detlefsen, Andrés Ismalej y Harry Mendez.
+ * Creación: 19/01/25
+ * Última modificación: 22/01/25
+ * @FileName: Main.java
+ * Descripción: Clase principal para mostrar al usuario las opciones de la licuadora.
  */
 
 import java.util.InputMismatchException;
@@ -40,21 +39,36 @@ public class Main {
             switch (opcion) {
                 case 1:
                     licuadora.encender();
+                    System.out.println("\nLicuadora encendida y lista");
                     break;
                 case 2:
                     licuadora.llenar();
+                    System.out.println("\nLicuadora llena y lista");
                     break;
                 case 3:
-                    licuadora.aumentarVelocidad();
+                    if (!licuadora.getEncendido()) {
+                        System.out.println("\nNo se puede aumentar la velocidad. La licuadora está apagada.");
+                    } else if (!licuadora.getLleno()) {
+                        System.out.println("\nNo se puede aumentar la velocidad. La licuadora está vacía.");
+                    } else {
+                        licuadora.aumentarVelocidad();
+                        System.out.println("\nVelocidad aumentada a: " + licuadora.getVelocidad());
+                    }
                     break;
                 case 4:
-                    licuadora.consultarVelocidad();
+                    System.out.println("\nLa velocidad actual es: " + licuadora.getVelocidad());
                     break;
                 case 5:
                     licuadora.consultarLlenado();
+                    System.out.println(licuadora.getLleno()? "\nLa licuadora está llena." : "\nLa licuadora está vacía.");
                     break;
                 case 6:
+                    if (licuadora.getLleno()) {
                     licuadora.vaciar();
+                    System.out.println("\nLa licuadora se vació");
+                    } else {
+                    System.out.println("\nLa licuadora ya está vacía.");
+                    }
                     break;
                 case 7:
                     System.out.println("\nGracias por usar la Ninja X3000");
