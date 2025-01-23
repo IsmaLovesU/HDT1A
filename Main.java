@@ -4,7 +4,7 @@
  * Ing. Douglas Barrios
  * @author: Marcelo Detlefsen, Andrés Ismalej y Harry Mendez.
  * Creación: 19/01/25
- * Última modificación: 22/01/25
+ * Última modificación: 23/01/25
  * @FileName: Main.java
  * Descripción: Clase principal para mostrar al usuario las opciones de la licuadora.
  */

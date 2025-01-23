@@ -2,12 +2,11 @@
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de datos
  * Ing. Douglas Barrios
- * Colaboradores: 
- * Marcelo Detlefsen - 24554
- * Andrés Ismalej - 24005
- * Harry Mendez - 24089
- * Fecha: 23/01/2025
- * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
+ * @author: Marcelo Detlefsen, Andrés Ismalej y Harry Mendez.
+ * Creación: 19/01/25
+ * Última modificación: 23/01/25
+ * @FileName: Interfaz.java
+ * Descripción: Clase Interfaz que define métodos para manejar un sistema que incluye encender,
  * llenar, controlar velocidad y consultar el estado del llenado.
  */
 

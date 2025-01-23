@@ -2,12 +2,11 @@
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de datos
  * Ing. Douglas Barrios
- * Colaboradores: 
- * Marcelo Detlefsen - 24554
- * Andrés Ismalej - 24005
- * Harry Mendez - 24089
- * Fecha: 23/01/2025
- * Descripción: Clase licuadora que implementa interfaz, 
+ * @author: Marcelo Detlefsen, Andrés Ismalej y Harry Mendez.
+ * Creación: 19/01/25
+ * Última modificación: 23/01/25
+ * @FileName: Licuadora.java
+ * Clase licuadora que implementa interfaz, 
  * con funcionalidades básicas de una licuadora.
  */
 
