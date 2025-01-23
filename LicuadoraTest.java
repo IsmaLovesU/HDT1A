@@ -36,19 +36,19 @@ public class LicuadoraTest {
         /*
          * Verifica que la licuadora este vacia al inicio.
          */
-        assertFalse(licuadora.getlleno());
+        assertFalse(licuadora.getLleno());
 
         /*
          * Verifica que la licuadora se llene correctamente.
          */
         licuadora.llenar();
-        assertTrue(licuadora.getlleno());
+        assertTrue(licuadora.getLleno());
 
         /*
          * Intentar llenarla nuevamente y verificar que no cambie su estado
          */
         licuadora.llenar();
-        assertTrue(licuadora.getlleno());
+        assertTrue(licuadora.getLleno());
     }
 //------------------------------------------------------------------------------------------------------Test 3
     @Test
@@ -93,19 +93,19 @@ public class LicuadoraTest {
         * Llenar la licuadora antes de vaciarla.
         */ 
         licuadora.llenar();
-        assertTrue(licuadora.getlleno());
+        assertTrue(licuadora.getLleno());
 
         /*
         * Vaciar la licuadora y verificar que su estado cambie.
         */ 
         licuadora.vaciar();
-        assertFalse(licuadora.getlleno());
+        assertFalse(licuadora.getLleno());
 
         /*
         * Intentar vaciarla nuevamente y verificar que no cambie su estado.
         */
         licuadora.vaciar();
-        assertFalse(licuadora.getlleno());
+        assertFalse(licuadora.getLleno());
     }
 //------------------------------------------------------------------------------------------------------Test 5
     @Test
