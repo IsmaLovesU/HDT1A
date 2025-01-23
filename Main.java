@@ -48,7 +48,7 @@ public class Main {
                 case 3:
                     if (!licuadora.getEncendido()) {
                         System.out.println("\nNo se puede aumentar la velocidad. La licuadora está apagada.");
-                    } else if (!licuadora.getlleno()) {
+                    } else if (!licuadora.getLleno()) {
                         System.out.println("\nNo se puede aumentar la velocidad. La licuadora está vacía.");
                     } else {
                         licuadora.aumentarVelocidad();
@@ -60,10 +60,10 @@ public class Main {
                     break;
                 case 5:
                     licuadora.consultarLlenado();
-                    System.out.println(licuadora.getlleno()? "\nLa licuadora está llena." : "\nLa licuadora está vacía.");
+                    System.out.println(licuadora.getLleno()? "\nLa licuadora está llena." : "\nLa licuadora está vacía.");
                     break;
                 case 6:
-                    if (licuadora.getlleno()) {
+                    if (licuadora.getLleno()) {
                     licuadora.vaciar();
                     System.out.println("\nLa licuadora se vació");
                     } else {
