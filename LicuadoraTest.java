@@ -1,3 +1,13 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de datos
+ * Ing. Douglas Barrios
+ * @author: Marcelo Detlefsen, Andrés Ismalej y Harry Mendez.
+ * Creación: 23/01/25
+ * Última modificación: 23/01/25
+ * @FileName: LicuadoraTest.java
+ * Descripción: Clase con pruebas unitarias de cada método de Licuadora.
+ */
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
